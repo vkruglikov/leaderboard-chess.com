@@ -36,7 +36,6 @@ jobs:
         with:
           node-version: 20.x
       - name: Install Dependencies and Build
-        working-directory: './demo'
         run: npm install && npm run load-data && npm run build
 
       - name: Setup Pages
