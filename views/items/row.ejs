@@ -1,13 +1,13 @@
 <a ref="noreferrer" href="<%= item.url %>" target="_blank" class="items__item">
     <div class="items__item__rank" data-rank="<%= item.rank %>">#<%= item.rank %></div>
-    <img alt="<%= item.name %>" class="items__item__avatar" src="<%= item.avatar %>" loading="lazy"/>
+    <img alt="<%= item.name %>" class="items__item__avatar" src="<%= item.avatar || '/assets/user.svg?' + buildTime %>" loading="lazy"/>
     <div class="items__item__name">
         <% if (item.title) { %>
             <span class="items__item__title"><%= item.title %></span>
         <% } %>
-        <%= item.name %>
+        <%= item.name || item.url.split('/').pop() %>
         <% if (item.country) { %>
-            <span class="items__item__country fi fi-<%= item.country.split('/').pop().toLowerCase() %>" />
+            <span class="items__item__country fi fi-<%= item.country ? item.country.split('/').pop().toLowerCase() : '' %>" />
         <% } %>
     </div>
     <div class="items__item__score"><%= item.score %></div>
