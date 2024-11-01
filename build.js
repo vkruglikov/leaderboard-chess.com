@@ -4,21 +4,6 @@ const ejs = require('ejs');
 const data = require('./api-chess-com-pub-leaderboards.json');
 const minify = require('html-minifier').minify;
 
-ejs.renderFile(path.join(__dirname, 'views', 'index.ejs'), { data, buildTime: Date.now() }, (err, html) => {
-    if (err) throw err;
-
-    fs.writeFile(path.join(__dirname, 'build', 'index.html'), minify(html, {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeEmptyAttributes: true,
-        minifyCSS: true,
-        minifyJS: true,
-    }), (err) => {
-        if (err) throw err;
-    });
-});
-
 function copyDir(src, dest) {
     if (!fs.existsSync(dest)) {
         fs.mkdirSync(dest, { recursive: true });
@@ -39,3 +24,18 @@ function copyDir(src, dest) {
 }
 
 copyDir(path.join(__dirname, 'public'), path.join(__dirname, 'build'));
+
+ejs.renderFile(path.join(__dirname, 'views', 'index.ejs'), { data, buildTime: Date.now() }, (err, html) => {
+    if (err) throw err;
+
+    fs.writeFile(path.join(__dirname, 'build', 'index.html'), minify(html, {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeEmptyAttributes: true,
+        minifyCSS: true,
+        minifyJS: true,
+    }), { flag: 'w' }, (err) => {
+        if (err) throw err;
+    });
+});
