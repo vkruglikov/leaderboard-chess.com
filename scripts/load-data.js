@@ -7,7 +7,7 @@ function getPlayers() {
     return new Promise((resolve) => {
         fs.createReadStream('players.csv')
             .pipe(csv({
-                separator: ';',
+                separator: ',',
             }))
             .on('data', (data) => results.push(data))
             .on('end', () => {
