@@ -48,3 +48,19 @@ ejs.renderFile(path.join(__dirname, '../views', 'index.ejs'), { data, buildTime:
         if (err) throw err;
     });
 });
+
+
+ejs.renderFile(path.join(__dirname, '../views', 'index.ejs'), { data, buildTime: Date.now() }, (err, html) => {
+    if (err) throw err;
+
+    fs.writeFile(path.join(__dirname, '../build', '404.html'), minify(html, {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeEmptyAttributes: true,
+        minifyCSS: true,
+        minifyJS: true,
+    }), { flag: 'w' }, (err) => {
+        if (err) throw err;
+    });
+});

@@ -47,8 +47,6 @@ function sort(arr) {
     const players = (await Promise.all((await getPlayers()).map(({username}) => loadUser(username)))).filter(Boolean);
     const data = await (await fetch('https://api.chess.com/pub/leaderboards')).json();
 
-console.log(players);
-
     const unsortedData = players.reduce((acc, user) => {
         if (user.stats.chess_blitz) {
             acc.live_blitz.push({
