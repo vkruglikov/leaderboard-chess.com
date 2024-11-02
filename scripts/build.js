@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const ejs = require('ejs');
-const data = require('../api-chess-com-pub-leaderboards.json');
 const minify = require('html-minifier').minify;
+const data = require('../api-chess-com-pub-leaderboards.json');
 
 function copyDir(src, dest) {
     if (!fs.existsSync(dest)) {
@@ -18,7 +18,16 @@ function copyDir(src, dest) {
         if (entry.isDirectory()) {
             copyDir(srcPath, destPath);
         } else {
-            fs.copyFileSync(srcPath, destPath);
+            if (path.extname(entry.name) === '.css') {
+                const cssContent = fs.readFileSync(srcPath, 'utf8');
+                const minifiedCss = minify(cssContent, {
+                    minifyCSS: true,
+                    collapseWhitespace: true,
+                });
+                fs.writeFileSync(destPath, minifiedCss, 'utf8');
+            } else {
+                fs.copyFileSync(srcPath, destPath);
+            }
         }
     }
 }
