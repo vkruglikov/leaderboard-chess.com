@@ -10,9 +10,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "0 9 * * *"   # Запуск в 9:00 утра UTC
-    - cron: "0 18 * * *"  # Запуск в 6:00 вечера UTC
-    - cron: "0 0 * * *"   # Запуск в полночь UTC
+    - cron: "0 * * * *"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
