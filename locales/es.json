@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Tabla de líderes real de Chess.com - leaderboard-chess.com",
+    "description": "Tabla de líderes real de chess.com, mostrando las clasificaciones actuales de los jugadores, incluidos aquellos ocultos en las listas oficiales.",
+    "keywords": "tabla de líderes ajedrez, clasificaciones reales de ajedrez, chess.com, jugadores ocultos, clasificaciones de ajedrez"
+  },
+  "header": {
+    "title": "Tabla de líderes real de Chess.com",
+    "subtitle": "Tabla de líderes real de chess.com, mostrando las clasificaciones actuales de los jugadores, incluidos aquellos ocultos en la clasificación oficial."
+  },
+  "blocks": {
+    "blitz": {
+      "title": "Blitz"
+    },
+    "bullet": {
+      "title": "Bala"
+    },
+    "rapid": {
+      "title": "Rápido"
+    }
+  },
+  "footer": {
+    "updateText": "leaderboard-chess.com se actualizó "
+  }
+}

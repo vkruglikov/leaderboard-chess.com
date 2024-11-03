@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Classement réel de Chess.com - leaderboard-chess.com",
+    "description": "Classement réel de chess.com, affichant les classements actuels des joueurs, y compris ceux qui sont cachés dans les listes officielles.",
+    "keywords": "classement échecs, classements réels d'échecs, chess.com, joueurs cachés, classements d'échecs"
+  },
+  "header": {
+    "title": "Classement réel de Chess.com",
+    "subtitle": "Classement réel de chess.com, affichant les classements actuels des joueurs, y compris ceux qui sont cachés dans le classement officiel."
+  },
+  "blocks": {
+    "blitz": {
+      "title": "Blitz"
+    },
+    "bullet": {
+      "title": "Balle"
+    },
+    "rapid": {
+      "title": "Rapide"
+    }
+  },
+  "footer": {
+    "updateText": "leaderboard-chess.com a été mis à jour "
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Real Chess.com Leaderboards & Real Chess.com Rankings - leaderboard-chess.com",
+    "description": "The real chess.com leaderboard, showing actual player rankings, including those hidden from official lists.",
+    "keywords": "chess leaderboard, real chess rankings, chess.com, hidden players, chess ratings"
+  },
+  "header": {
+    "title": "Real Chess.com Leaderboard",
+    "subtitle": "The real chess.com leaderboard, showing actual player rankings, even those hidden from the official ranking."
+  },
+  "blocks": {
+    "blitz": {
+      "title": "Blitz"
+    },
+    "bullet": {
+      "title": "Bullet"
+    },
+    "rapid": {
+      "title": "Rapid"
+    }
+  },
+  "footer": {
+    "updateText": "leaderboard-chess.com was updated at "
+  }
+}

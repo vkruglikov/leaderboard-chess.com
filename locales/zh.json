@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Chess.com 真实排行榜 - leaderboard-chess.com",
+    "description": "Chess.com 真实排行榜，显示当前玩家的评级，包括在官方列表中隐藏的玩家。",
+    "keywords": "棋类排行榜, 真实棋类评级, chess.com, 隐藏玩家, 棋类评级"
+  },
+  "header": {
+    "title": "Chess.com 真实排行榜",
+    "subtitle": "Chess.com 真实排行榜，显示当前玩家的评级，包括在官方排行榜中隐藏的玩家。"
+  },
+  "blocks": {
+    "blitz": {
+      "title": "闪电战"
+    },
+    "bullet": {
+      "title": "子弹"
+    },
+    "rapid": {
+      "title": "快速"
+    }
+  },
+  "footer": {
+    "updateText": "leaderboard-chess.com 已更新 "
+  }
+}

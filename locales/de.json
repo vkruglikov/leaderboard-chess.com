@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Echte Rangliste von Chess.com - leaderboard-chess.com",
+    "description": "Echte Rangliste von chess.com, die die aktuellen Wertungen der Spieler anzeigt, einschließlich derjenigen, die in den offiziellen Listen verborgen sind.",
+    "keywords": "schach rangliste, echte schachwertungen, chess.com, versteckte spieler, schachwertungen"
+  },
+  "header": {
+    "title": "Echte Rangliste von Chess.com",
+    "subtitle": "Echte Rangliste von chess.com, die die aktuellen Wertungen der Spieler anzeigt, einschließlich derjenigen, die in der offiziellen Rangliste verborgen sind."
+  },
+  "blocks": {
+    "blitz": {
+      "title": "Blitz"
+    },
+    "bullet": {
+      "title": "Kugel"
+    },
+    "rapid": {
+      "title": "Schnell"
+    }
+  },
+  "footer": {
+    "updateText": "leaderboard-chess.com wurde aktualisiert "
+  }
+}

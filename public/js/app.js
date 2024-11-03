@@ -1,7 +1,8 @@
 function App() {
     document.addEventListener('DOMContentLoaded', function() {
         this.elements = {
-            time: document.getElementById('js-build-time')
+            time: document.getElementById('js-build-time'),
+            timeRender: document.getElementById('js-build-time-render'),
         }
         this.changeTimeToLocal();
     }.bind(this));
@@ -15,7 +16,7 @@ App.prototype = {
 
         const result = `${localDate} ${localTime}`;
 
-        this.elements.time.innerHTML = `leaderboard-chess.com was updated at ${result}`;
+        this.elements.timeRender.innerHTML = result;
     }
 }
 

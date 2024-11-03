@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The real chess.com leaderboard, showing actual player rankings, including those hidden from official lists.">
-    <meta name="keywords" content="chess leaderboard, real chess rankings, chess.com, hidden players, chess ratings">
+    <meta name="description" content="<%= locale.meta.description %>">
+    <meta name="keywords" content="<%= locale.meta.keywords %>">
     <meta name="robots" content="index, follow">
-    <title>Real Chess.com Leaderboards & Real Chess.com Rankings - leaderboard-chess.com</title>
+    <title><%= locale.meta.title %></title>
     <link rel="stylesheet" href="/normalize.css?<%= buildTime %>" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
     <link rel="stylesheet" href="/index.css?<%= buildTime %>" />
@@ -37,8 +37,8 @@
     <a href="/" class="header__logo-link" aria-label="Leaderboard Chess Home">
         <img class="header__logo" loading="lazy" src="/assets/leaderboard.svg?<%= buildTime %>" alt="Leaderboard Chess Logo" />
     </a>
-    <h1 class="header__title">Real Chess.com Leaderboard</h1>
-    <p class="subtitle">The real chess.com leaderboard, showing actual player rankings, even those hidden from the official rankings.</p>
+    <h1 class="header__title"><%= locale.header.title %></h1>
+    <p class="subtitle"><%= locale.header.subtitle %></p>
 </header>
 
 <main class="content">
@@ -46,7 +46,7 @@
         <article class="block" aria-labelledby="blitz-title">
             <header class="block__title">
                 <img src="/assets/blitz.svg?<%= buildTime %>" alt="Blitz Icon" class="block__title__icon" />
-                <h2 id="blitz-title" class="block__title__text">Blitz</h2>
+                <h2 id="blitz-title" class="block__title__text"><%= locale.blocks.blitz.title %></h2>
             </header>
             <div class="items">
                 <% data.live_blitz.slice(0, 10).forEach(item => { %>
@@ -58,7 +58,7 @@
         <article class="block" aria-labelledby="bullet-title" id="screen-for-og-image">
             <header class="block__title">
                 <img src="/assets/bullet.svg?<%= buildTime %>" alt="Bullet Icon" class="block__title__icon" />
-                <h2 id="bullet-title" class="block__title__text">Bullet</h2>
+                <h2 id="bullet-title" class="block__title__text"><%= locale.blocks.bullet.title %></h2>
             </header>
             <div class="items">
                 <% data.live_bullet.slice(0, 10).forEach(item => { %>
@@ -70,7 +70,7 @@
         <article class="block" aria-labelledby="rapid-title">
             <header class="block__title">
                 <img src="/assets/rapid.svg?<%= buildTime %>" alt="Rapid Icon" class="block__title__icon" />
-                <h2 id="rapid-title" class="block__title__text">Rapid</h2>
+                <h2 id="rapid-title" class="block__title__text"><%= locale.blocks.rapid.title %></h2>
             </header>
             <div class="items">
                 <% data.live_rapid.slice(0, 10).forEach(item => { %>
@@ -81,7 +81,7 @@
     </section>
 </main>
 <footer class="content footer">
-    <div id="js-build-time" data-time="<%= new Date() %>">leaderboard-chess.com was updated at <%= new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }) %></div>
+    <div id="js-build-time" data-time="<%= new Date() %>"><%= locale.footer.updateText %> <span id="js-build-time-render"><%= new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }) %></span></div>
     <a class="github" href="https://github.com/vkruglikov/leaderboard-chess.com">
         <img src="/assets/github-mark.svg?<%= buildTime %>" alt="GitHub Logo" class="footer__icon" />
         Github Open Source
