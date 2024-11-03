@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="/index.css?<%= buildTime %>" />
     <link rel="icon" href="/assets/favicon.svg?<%= buildTime %>" type="image/svg+xml">
     <script src="/js/app.js?<%= buildTime %>" type="text/javascript" ></script>
+    <meta property="og:image" content="/og-image.png?<%= buildTime %>"/>
+    <meta property="og:image:width" content="730"/>
+    <meta property="og:image:height" content="544" />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -52,7 +55,7 @@
             </div>
         </article>
 
-        <article class="block" aria-labelledby="bullet-title">
+        <article class="block" aria-labelledby="bullet-title" id="screen-for-og-image">
             <header class="block__title">
                 <img src="/assets/bullet.svg?<%= buildTime %>" alt="Bullet Icon" class="block__title__icon" />
                 <h2 id="bullet-title" class="block__title__text">Bullet</h2>

@@ -4,9 +4,10 @@
   "author": "Valentin Kruglikov",
   "license": "MIT",
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js && npm run og-image",
+    "og-image": "node scripts/og-image.js",
     "load-data": "node scripts/load-data.js",
-    "dev": "concurrently \"nodemon --delay 500ms -e js,ejs scripts/server.js\" \"browser-sync start --no-notify --no-ui --proxy 'http://localhost:3000' --files '**/*.*' --port 3001\""
+    "dev": "concurrently \"nodemon --delay 500msw -e js,ejs scripts/server.js\" \"browser-sync start --no-notify --no-ui --proxy 'http://localhost:3000' --files '**/*.*' --port 3001\""
   },
   "description": "Alternative leaderboard for chess.com",
   "devDependencies": {
@@ -16,6 +17,7 @@
     "ejs": "^3.1.10",
     "express": "^4.21.1",
     "html-minifier": "^4.0.0",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "puppeteer": "^23.6.1"
   }
 }
