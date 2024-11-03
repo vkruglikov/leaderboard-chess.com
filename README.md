@@ -21,3 +21,12 @@ new_user,hidden_reason
 - Ensure that the username is correct.
 - Provide a valid reason for hiding the user from Chess.com.
 
+## How often is the data updated?
+Every hour
+
+## Developing guide
+
+- `npm i` - to install dependencies
+- `npm run load-data` - to load and prepare data
+- `npm run dev` - to start development server
+- `npm run build` - to build the project

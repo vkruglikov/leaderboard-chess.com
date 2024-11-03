@@ -36,49 +36,8 @@
     <h1 class="header__title">Real Chess.com Leaderboard</h1>
     <p class="subtitle">The real chess.com leaderboard, showing actual player rankings, even those hidden from the official rankings.</p>
 </header>
-
-<main class="content">
-    <section class="blocks" aria-label="Leaderboard Sections">
-        <article class="block" aria-labelledby="blitz-title">
-            <header class="block__title">
-                <img src="/assets/blitz.svg?<%= buildTime %>" alt="Blitz Icon" class="block__title__icon" />
-                <h2 id="blitz-title" class="block__title__text">Blitz</h2>
-            </header>
-            <div class="items">
-                <% data.live_blitz.slice(0, 10).forEach(item => { %>
-                    <%- include('items/row', { item: item, buildTime }); %>
-                <% }); %>
-            </div>
-        </article>
-
-        <article class="block" aria-labelledby="bullet-title">
-            <header class="block__title">
-                <img src="/assets/bullet.svg?<%= buildTime %>" alt="Bullet Icon" class="block__title__icon" />
-                <h2 id="bullet-title" class="block__title__text">Bullet</h2>
-            </header>
-            <div class="items">
-                <% data.live_bullet.slice(0, 10).forEach(item => { %>
-                    <%- include('items/row', { item: item, buildTime }); %>
-                <% }); %>
-            </div>
-        </article>
-
-        <article class="block" aria-labelledby="rapid-title">
-            <header class="block__title">
-                <img src="/assets/rapid.svg?<%= buildTime %>" alt="Rapid Icon" class="block__title__icon" />
-                <h2 id="rapid-title" class="block__title__text">Rapid</h2>
-            </header>
-            <div class="items">
-                <% data.live_rapid.slice(0, 10).forEach(item => { %>
-                    <%- include('items/row', { item: item, buildTime }); %>
-                <% }); %>
-            </div>
-        </article>
-    </section>
-</main>
-
 <footer class="content footer">
-    leaderboard-chess.com was updated at <%= new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }) %>
+    404 - Page Not Found
 </footer>
 </body>
 </html>

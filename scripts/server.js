@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.render('index', { data, buildTime: Date.now() });
 });
 
+app.get('*', (req, res) => {
+    res.render('404', { data, buildTime: Date.now() });
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server started http://localhost:${PORT}`);

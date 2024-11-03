@@ -50,7 +50,7 @@ ejs.renderFile(path.join(__dirname, '../views', 'index.ejs'), { data, buildTime:
 });
 
 
-ejs.renderFile(path.join(__dirname, '../views', 'index.ejs'), { data, buildTime: Date.now() }, (err, html) => {
+ejs.renderFile(path.join(__dirname, '../views', '404.ejs'), { data, buildTime: Date.now() }, (err, html) => {
     if (err) throw err;
 
     fs.writeFile(path.join(__dirname, '../build', '404.html'), minify(html, {
