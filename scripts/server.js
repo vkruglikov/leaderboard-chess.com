@@ -22,3 +22,12 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server started http://localhost:${PORT}`);
 });
+
+
+process.on('SIGTERM', () => {
+    process.exit(0);
+});
+
+process.on('SIGINT', () => {
+    process.exit(0);
+});
