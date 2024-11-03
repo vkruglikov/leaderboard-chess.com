@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
     <link rel="stylesheet" href="/index.css?<%= buildTime %>" />
     <link rel="icon" href="/assets/favicon.svg?<%= buildTime %>" type="image/svg+xml">
+    <script src="/js/app.js?<%= buildTime %>" type="text/javascript" ></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -76,9 +77,12 @@
         </article>
     </section>
 </main>
-
 <footer class="content footer">
-    leaderboard-chess.com was updated at <%= new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }) %>
+    <div id="js-build-time" data-time="<%= new Date() %>">leaderboard-chess.com was updated at <%= new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }) %></div>
+    <a class="github" href="https://github.com/vkruglikov/leaderboard-chess.com">
+        <img src="/assets/github-mark.svg?<%= buildTime %>" alt="GitHub Logo" class="footer__icon" />
+        Github Open Source
+    </a>
 </footer>
 </body>
 </html>

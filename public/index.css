@@ -152,6 +152,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+a.github {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+a.github img {
+    width: 20px;
+    height: 20px;
 }
 
 @media (max-width: 680px) {
