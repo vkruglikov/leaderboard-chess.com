@@ -3,11 +3,13 @@ const { exec } = require('child_process');
 const path = require('path');
 
 (async () => {
-    const server = exec('node scripts/server.js'); // Замените команду на вашу
+    const server = exec('node scripts/server.js');
 
-    await new Promise(resolve => setTimeout(resolve, 5000)); // Время может варьироваться
+    await new Promise(resolve => setTimeout(resolve, 5000));
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
     await page.goto('http://localhost:3000');
     const element = await page.$('#screen-for-og-image');
