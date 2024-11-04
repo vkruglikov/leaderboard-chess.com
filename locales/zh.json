@@ -1,4 +1,6 @@
 {
+  "code": "zh",
+  "flag": "cn",
   "meta": {
     "title": "Chess.com 真实排行榜 - leaderboard-chess.com",
     "description": "Chess.com 真实排行榜，显示当前玩家的评级，包括在官方列表中隐藏的玩家。",

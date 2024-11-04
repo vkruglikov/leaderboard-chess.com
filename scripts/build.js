@@ -3,19 +3,8 @@ const path = require('path');
 const ejs = require('ejs');
 const minify = require('html-minifier').minify;
 const data = require('../api-chess-com-pub-leaderboards.json');
+const loadLocales = require('./tools/index').loadLocales;
 
-function loadLocales(localesPath) {
-    const locales = {};
-
-    fs.readdirSync(localesPath).forEach((file) => {
-        const localeCode = path.parse(file).name;
-        const filePath = path.join(localesPath, file);
-
-        locales[localeCode] = require(filePath);
-    });
-
-    return locales;
-}
 const locals = loadLocales(path.join(__dirname, '../locales'));
 
 function copyDir(src, dest) {
@@ -49,7 +38,7 @@ function copyDir(src, dest) {
 copyDir(path.join(__dirname, '../public'), path.join(__dirname, '../build'));
 
 Object.keys(locals).forEach((localeCode) => {
-    ejs.renderFile(path.join(__dirname, '../views', 'index.ejs'), { locale: locals[localeCode], data, buildTime: Date.now() }, (err, html) => {
+    ejs.renderFile(path.join(__dirname, '../views', 'index.ejs'), { locale: locals[localeCode], locales: Object.values(locals), data, buildTime: Date.now() }, (err, html) => {
         if (err) throw err;
 
         const pathPrefix = localeCode === 'en' ? '' : `/${localeCode}`;
@@ -93,15 +82,15 @@ ejs.renderFile(path.join(__dirname, '../views', '404.ejs'), { locale: locals.en,
     });
 });
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+const sitemap = `<?xml version="1.0"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.leaderboard-chess.com/</loc>
         ${Object.keys(locals).map((code) => {
             if (code === 'en') {
                 return '';
             }
-            return `<xhtml:link rel="alternate" hreflang="${code}" href="https://www.leaderboard-chess.com/${code}/" />`;
+            return `<link rel="alternate" hreflang="${code}" href="https://www.leaderboard-chess.com/${code}/" />`;
         }).join('\n')}
     </url>
 </urlset>`;

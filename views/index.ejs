@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= locale.code %>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,7 +87,9 @@
         Github Open Source
     </a>
     <div>
-
+        <% for(var i = 0; i < locales.length; i++) { %>
+            <a href="/<%= locales[i].code %>"><span class="items__item__country fi fi-<%= locales[i].flag || locales[i].code %>" ></span></a>
+        <% } %>
     </div>
 </footer>
 </body>
