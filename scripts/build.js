@@ -83,14 +83,14 @@ ejs.renderFile(path.join(__dirname, '../views', '404.ejs'), { locale: locals.en,
 });
 
 const sitemap = `<?xml version="1.0"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://www.leaderboard-chess.com/</loc>
         ${Object.keys(locals).map((code) => {
             if (code === 'en') {
                 return '';
             }
-            return `<link rel="alternate" hreflang="${code}" href="https://www.leaderboard-chess.com/${code}/" />`;
+            return `<xhtml:link rel="alternate" hreflang="${code}" href="https://www.leaderboard-chess.com/${code}/" />`;
         }).join('\n')}
     </url>
 </urlset>`;

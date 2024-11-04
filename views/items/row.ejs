@@ -1,4 +1,4 @@
-<a ref="noreferrer" href="<%= item.url %>" target="_blank" class="items__item">
+<a ref="noreferrer" href="<%= item.url %>" target="_blank" class="items__item" data-rank="<%= item.rank %>">
     <div class="items__item__rank" data-rank="<%= item.rank %>">#<%= item.rank %></div>
     <img alt="<%= item.name %>" class="items__item__avatar" src="<%= item.avatar || '/assets/user.svg?' + buildTime %>" loading="lazy"/>
     <div class="items__item__name">
