@@ -52,7 +52,7 @@
                 <h2 id="blitz-title" class="block__title__text"><%= locale.blocks.blitz.title %></h2>
             </header>
             <div class="items">
-                <% data.live_blitz.slice(0, 10).forEach(item => { %>
+                <% data.live_blitz.slice(0, 50).forEach(item => { %>
                     <%- include('items/row', { item: item, buildTime }); %>
                 <% }); %>
             </div>
@@ -64,7 +64,7 @@
                 <h2 id="bullet-title" class="block__title__text"><%= locale.blocks.bullet.title %></h2>
             </header>
             <div class="items">
-                <% data.live_bullet.slice(0, 10).forEach(item => { %>
+                <% data.live_bullet.slice(0, 50).forEach(item => { %>
                     <%- include('items/row', { item: item, buildTime }); %>
                 <% }); %>
             </div>
@@ -76,7 +76,7 @@
                 <h2 id="rapid-title" class="block__title__text"><%= locale.blocks.rapid.title %></h2>
             </header>
             <div class="items">
-                <% data.live_rapid.slice(0, 10).forEach(item => { %>
+                <% data.live_rapid.slice(0, 50).forEach(item => { %>
                     <%- include('items/row', { item: item, buildTime }); %>
                 <% }); %>
             </div>
